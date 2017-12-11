@@ -1,0 +1,12 @@
+ul.kanan,{
+    margin-left: 5px;
+}
+img.img-fluid {
+    border-radius: 50%;
+} 
+
+.btn:hover {
+    cursor: pointer;
+}  
+
+

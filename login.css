@@ -1,0 +1,43 @@
+body {
+    background-color: #f9f9f9;
+}
+a.title {
+    text-decoration: none; 
+    color: #025923;
+} 
+
+div.container 
+{
+    margin-top: 60px;
+    
+} 
+
+form.loginform {
+    width:350px;
+    margin:0 auto;
+    border:1px solid #cfcfcf;
+    border-top:3px solid #028a75; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 1%;
+} 
+.btn-primary {
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg,#28a745 0%,#025923 80%);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+div.container {
+    margin-top: 20px;
+}
+p.text-dark {
+    width:350px;
+    margin:0 auto;
+    border:1px solid #cfcfcf; 
+    padding: 20px;
+    border-radius: 1%;
+}

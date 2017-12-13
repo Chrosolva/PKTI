@@ -1,0 +1,78 @@
+a.title {
+    text-decoration: none;
+    display: inline;
+    float:left;
+} 
+
+header.navbar {
+    background-color: #025923;
+}
+
+.kanan {
+    float: right;
+}
+
+h3.h3 {
+    display: inline;    
+} 
+
+.idxform {
+    padding: 10px 20px;
+    margin: 10px auto; 
+    background-color: #262626;
+    border:10px;
+    border-radius: 10px 10px 10px 10px;
+} 
+div.row {
+    padding-top: 5px;
+}
+form.idxform {
+    width:450px;
+    padding-bottom: 20px;
+}
+
+p.h4, h1.h1 {
+    padding-top: 25px;
+}
+label.h6,label.h7,h1.h1,p.h4 {
+    color: #e2e2e2; 
+    
+}
+h1.h1{
+    margin-top: 35px;
+} 
+ 
+
+div.sect1 {
+    background-image: url(../image/green.jpg);
+    background-size: cover; 
+    background-position: center; 
+    padding: 0px; 
+    margin: auto;
+}
+
+div.sect2 ,footer.sect5{
+    background-color: rgba(0, 104, 35,0.9);
+}
+
+div.sect3 ,ul.flex-column{
+    margin-top: 20px;
+}
+
+div.sect4 {
+    background-color: #efefef;
+    padding: 20px;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg,#28a745 0%,#025923 80%);
+}
+
+textarea.form-control {
+    overflow: hidden;
+} 
+footer {
+    padding: 20px;
+} 
+

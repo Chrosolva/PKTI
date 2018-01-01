@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <div class="container">
-            <a class=" title" href="index.html">
+            <a class=" title" href="index.php">
                 <h3 class="text-center">Trash Cycle</h3>
             </a>
 

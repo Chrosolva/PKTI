@@ -26,19 +26,19 @@
             <nav class="kanan nav navbar navbar-brand flex-column">
                 <ul class="kanan navbar-nav nav-item">
                     <li class="nav-item">
-                        <a href="Home.html" class="nav-link">Username</a>       
+                        <a href="Home.php" class="nav-link">Username</a>       
                     </li>
                     <li class="nav-item">
-                        <a href="RecycleList.html" class="nav-link active">Re-Cycle List</a>        
+                        <a href="RecycleList.php" class="nav-link active">Re-Cycle List</a>        
                     </li>
                     <li class="nav-item">
-                        <a href="RecycleTips.html" class="nav-link">Re-Cycle Tips</a>
+                        <a href="RecycleTips.php" class="nav-link">Re-Cycle Tips</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">About Us</a>
                     </li> 
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Sign Out</a>
+                        <a href="index.php" class="nav-link">Sign Out</a>
                     </li>
                 </ul>
             </nav>

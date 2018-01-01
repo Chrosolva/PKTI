@@ -34,9 +34,9 @@ form.loginform {
 div.container {
     margin-top: 20px;
 }
-p.text-dark {
+ p.text-dark {
     width:350px;
-    margin:0 auto;
+    margin:0 auto 5px auto;
     border:1px solid #cfcfcf; 
     padding: 20px;
     border-radius: 1%;

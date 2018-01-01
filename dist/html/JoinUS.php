@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trash Cycle Sign In Page</title> 
+    <title>Trash Cycle Join us Page</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Bootstrap CSS -->
@@ -12,10 +12,10 @@
 <body>
     <div class="container-fluid">
         <div class="container">
-            <a class=" title" href="index.html"><h3 class="text-center">Trash Cycle</h3></a> 
-            <h5 class="text-center text-dark">Sign Up to Trash Cycle</h5>
+            <a class=" title" href="index.php"><h3 class="text-center">Trash Cycle</h3></a> 
+            <h3 class="text-center text-dark">Join as Trash Picker</h3> 
             <div class="col-sm-12">
-                <form class="loginform mt-4" action="Login.html" style="width: 450px;">    
+                <form class="loginform mt-4" action="Login.php" style="width: 450px;">    
                     <div class="form-group row">
                         <label for="InputName" class="h6 col-sm-4 col-form-label">Name</label>
                         <div class="col-sm-8">
@@ -51,7 +51,7 @@
             </div>
             <div class="col-sm-12 text-center">
                 <div class="container">
-                    <p class="text-dark" style="width: 450px;">Already have an account ? <a href="Login.html" class="nav-item title h6">Sign Up</a></p>
+                    <p class="text-dark" style="width: 450px;">Already have an account ? <a href="Login.php" class="nav-item title h6">Sign In</a></p>
                 </div>
             </div>            
         </div>

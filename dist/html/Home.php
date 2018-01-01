@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">  
     <link rel="stylesheet" href="../css/index.css"> 
     <link rel="stylesheet" href="../css/cyclelist.css">
-    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css"> 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <style>
         .sect2 {
             padding: 10px;
@@ -38,23 +42,31 @@
     <header class=" header navbar container-fluid navbar-expand navbar-dark">
         <div class="container">
             <a class="text-light container title" href="#"><h3 class="output h3">Trash Cycle</h3></a>
-            <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-right" style="width: 35px;">
             <nav class="kanan nav navbar navbar-brand flex-column">
                 <ul class="kanan navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a href="Home.html" class="nav-link">Username</a>       
+                        <a href="RecycleList.php" class="nav-link">Re-Cycle List</a>        
                     </li>
                     <li class="nav-item">
-                        <a href="RecycleList.html" class="nav-link">Re-Cycle List</a>        
-                    </li>
-                    <li class="nav-item">
-                        <a href="RecycleTips.html" class="nav-link">Re-Cycle Tips</a>
+                        <a href="RecycleTips.php" class="nav-link">Re-Cycle Tips</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Sign Out</a>
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-left" style="width: 35px; margin-right:10px;">
+                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">All</a>
+                                <a class="dropdown-item" href="#">Anorganic</a>
+                                <a href="index.php" class="dropdown-item">Sign Out</a>
+                            </div>
+                        </div>
+                        
+                        
                     </li>
                 </ul>
             </nav>
@@ -80,7 +92,7 @@
     </div>
 
     <div class="container-fluid sect3 pb-3">
-        <h3 class="text-center mb-3">How Do We Collect It ? </h3>
+        <h3 class="text-center mb-3">Customer List </h3>
         <div class="container detail-scroll">
             <ul class="list-inline">
                 <li class="list-inline-item detail-box">

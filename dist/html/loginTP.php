@@ -36,7 +36,7 @@
                 <div class="container">
                     <p class="text-dark">
                         Don't have an account ? 
-                        <a href="SignUp.php" class="nav-item title h6">Create one</a>
+                        <a href="JoinUS.php" class="nav-item title h6">Create one</a>
                     </p>
                 </div>
             </div>

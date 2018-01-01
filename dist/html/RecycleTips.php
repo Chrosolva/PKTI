@@ -40,12 +40,8 @@
     <header class=" header navbar container-fluid navbar-expand navbar-dark">
         <div class="container">
             <a class="text-light container title" href="#"><h3 class="output h3">Trash Cycle</h3></a>
-            <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-right" style="width: 35px;">
             <nav class="kanan nav navbar navbar-brand flex-column">
                 <ul class="kanan navbar-nav nav-item">
-                    <li class="nav-item">
-                        <a href="Home.php" class="nav-link">Username</a>       
-                    </li>
                     <li class="nav-item">
                         <a href="RecycleList.php" class="nav-link">Re-Cycle List</a>        
                     </li>
@@ -53,10 +49,19 @@
                         <a href="RecycleTips.php" class="nav-link active">Re-Cycle Tips</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="AboutUs.php" class="nav-link">About Us</a>
                     </li> 
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link">Sign Out</a>
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-left" style="width: 35px; margin-right:10px;">
+                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Username</a>
+                                <a href="index.php" class="dropdown-item">Sign Out</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>

@@ -30,15 +30,9 @@
                         <a href="SignUp.php" class="nav-link">Sign Up</a>       
                     </li>
                     <li class="nav-item">
-                        <a href="RecycleList.php" class="nav-link">Re-Cycle List</a>        
-                    </li>
-                    <li class="nav-item">
-                        <a href="RecycleTips.php" class="nav-link">Re-Cycle Tips</a>
-                    </li>
-                    <li class="nav-item">
                     <a href="loginTP.php" class="nav-link">Join Us</a></li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="AboutUsnotloginned.php" class="nav-link">About Us</a>
                     </li>
                 </ul>
             </nav>
@@ -164,7 +158,7 @@
             <p class="text-center h5 text-dark">We also offer some tips for reusing usefull waste instead of recycling it.</p> 
             <p class="text-center h5 text-dark mb-3">Get Started </p>
             <div class="col-md-12 text-center" >
-                <a href="RecycleTips.php" class="btn btn-success text-center">Go to Re-Cycle Tips</a>
+                <a href="Login.php" class="btn btn-success text-center">Go to Re-Cycle Tips</a>
             </div>
 
                 

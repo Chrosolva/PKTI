@@ -51,7 +51,7 @@
                         <a href="RecycleTips.php" class="nav-link">Re-Cycle Tips</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="AboutUs.php" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
@@ -60,8 +60,7 @@
                                 <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">All</a>
-                                <a class="dropdown-item" href="#">Anorganic</a>
+                                <a class="dropdown-item" href="#">Username</a>
                                 <a href="index.php" class="dropdown-item">Sign Out</a>
                             </div>
                         </div>

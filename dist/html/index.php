@@ -30,7 +30,7 @@
                         <a href="SignUp.php" class="nav-link">Sign Up</a>       
                     </li>
                     <li class="nav-item">
-                    <a href="loginTP.php" class="nav-link">Join Us</a></li>
+                    <a href="JoinUS.php" class="nav-link">Join Us</a></li>
                     <li class="nav-item">
                         <a href="AboutUsnotloginned.php" class="nav-link">About Us</a>
                     </li>

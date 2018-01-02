@@ -17,7 +17,8 @@
         }
     </style>
 </head>
-<body>
+<body> 
+    
     <header class=" header navbar container-fluid navbar-expand navbar-dark">
         <div class="container">
             <a class="text-light container title" href="#"><h3 class="output h3">Trash Cycle</h3></a>

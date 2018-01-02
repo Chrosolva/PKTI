@@ -58,7 +58,7 @@
                                 <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Username</a>
+                                <a class="dropdown-item" href="Profile.php">Username</a>
                                 <a href="index.php" class="dropdown-item">Sign Out</a>
                             </div>
                         </div>

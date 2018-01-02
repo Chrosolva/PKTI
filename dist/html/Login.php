@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +17,7 @@
             <a class=" title" href="index.php"><h3 class="text-center">Trash Cycle</h3></a> 
             <h5 class="text-center text-dark">Sign in to Trash Cycle</h5>
             <div class="col-sm-12">
-                <form method="post" action="loginprocess.php" class="loginform mt-4" >    
+                <form method="post" action="#" class="loginform mt-4" >    
                     <div class="form-group">
                         <label for="InputEmail" class="h6 col-form-label" >Email address</label>         
                         <input type="email" name="email" class="form-control" size="35" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -49,4 +47,33 @@
     <script type='text/javascript' language='javascript' src="../js/popper.min.js"></script>
     <script type='text/javascript' language='javascript' src="../js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> 
+
+<?php 
+$host ="localhost"; 
+$user = "root"; 
+$password = ""; 
+$db = "trash cycle"; 
+
+mysql_connect($host,$user,$password); 
+mysql_select_db($db); 
+
+IF(isset($_POST['email'])) {
+    $email =$_POST['email']; 
+    $pwd = $_POST['password'];  
+
+    $sql = "'select * from User where Email_Address = '".$email. "'AND Password = '".$pwd."'limit 1'"; 
+
+    $result = mysql_query($sql); 
+
+    if(mysql_num_rows($result)==1) {
+        echo " You Have succesfully logged in"; 
+        exit();
+    }
+    else {
+        echo " You Have entered Invalid data"; 
+        exit();
+    }
+}
+
+?>

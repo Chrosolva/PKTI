@@ -9,12 +9,11 @@
 <body>
 
 <?php
-session_start(); 
 //Get values passes from login 
 $email = $_POST['email']; 
 $password = $_POST['password']; 
 
-echo $email; 
+echo "<h1>".$email."</h1>"; 
 echo $password; 
 // Prevent mysql injection 
 $email = stripcslashes($email); 

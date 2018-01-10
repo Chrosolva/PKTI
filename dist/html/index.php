@@ -54,39 +54,39 @@
                         </section> 
                     </div>
                     <div class="col-sm-6">
-                        <form class="idxform kanan" action="login.php">
+                        <form class="idxform kanan" action="modified.php" method="post">
                             <div class="form-group row">
                                 <label for="InputName" class="h6 col-sm-4 col-form-label">Name</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="InputName"  placeholder="Enter Your Name Here">
+                                    <input type="text" class="form-control" id="InputName"  placeholder="Enter Your Name Here" name="name" required>
                                 </div>
 
                             </div>
                             <div class="form-group row">
                                 <label for="InputEmail" class="h6 col-sm-4 col-form-label">Email address</label> 
                                 <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
                                 </div>
 
                             </div>
                             <div class="form-group row">
                                 <label for="InputPassword" class="h6 col-sm-4">Password</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="password" required>
                                 </div>
 
                             </div>
                             <div class="form-group row">
                                 <label for="InputNo" class="h6 col-sm-4">Phone Number</label> 
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="InputN0"  placeholder="Phone Number">    
+                                    <input type="text" class="form-control" id="InputN0"  placeholder="Phone Number" name="nohp" required>    
                                 </div>
 
                             </div>
                             <div class="form-group row">
                                 <label for="Address" class="h6 col-sm-4">Address</label>
                                 <div class="col-sm-8">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your Address"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your Address" name="address" required></textarea>
                                 </div>
 
                             </div>

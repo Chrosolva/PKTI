@@ -101,7 +101,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <image src="../image/73a9249f-a050-491e-bd75-08937f292719_1.0974051392b4a1788db13a947eb68b5a.jpeg" style="width: 200px; height: 200px;"></image><br>
-                            <button type="button" class="mt-2 btn btn-success" style="width: 100%">CONFIRM</button>
+                            <button type="button" class="mt-2 btn btn-success btn-confirm" style="width: 100%">CONFIRM</button>
                         </div>
                         <div class="col-sm-5">
                             <b>Username:</b>
@@ -122,7 +122,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <image src="../image/plastic-cap-ring-shank-roofing-nails.jpg" style="width: 200px; height: 200px;"></image><br>
-                            <button type="button" class="mt-2 btn btn-success" style="width: 100%">CONFIRM</button>
+                            <button type="button" class="mt-2 btn btn-success btn-confirm" style="width: 100%">CONFIRM</button>
                         </div>
                         <div class="col-sm-5">
                             <b>Username:</b>
@@ -143,7 +143,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <image src="../image/plastic.jpg" style="width: 200px; height: 200px;"></image><br>
-                            <button type="button" class="mt-2 btn btn-success" style="width: 100%">CONFIRM</button>
+                            <button type="button" class="mt-2 btn btn-success btn-confirm" style="width: 100%">CONFIRM</button>
                         </div>
                         <div class="col-sm-5">
                             <b>Username:</b>
@@ -164,7 +164,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <image src="../image/73a9249f-a050-491e-bd75-08937f292719_1.0974051392b4a1788db13a947eb68b5a.jpeg" style="width: 200px; height: 200px;"></image><br>
-                            <button type="button" class="mt-2 btn btn-success" style="width: 100%">CONFIRM</button>
+                            <button type="button" class="mt-2 btn btn-success btn-confirm" style="width: 100%">CONFIRM</button>
                         </div>
                         <div class="col-sm-5">
                             <b>Username:</b>
@@ -198,6 +198,15 @@
         });
 
         var marker = new google.maps.Marker({ position, map, title: 'Hello World!' });
+
+        var collectBtn = document.getElementsByClassName('btn-confirm');
+        for(var i = 0; i < collectBtn.length; i++) {
+         
+        collectBtn[i].addEventListener('click', function () {
+            var a = this.parentNode.parentNode.parentNode;
+            a.parentNode.removeChild(a);
+        })   
+        }
     </script>
 </body>
 </html>

@@ -17,7 +17,7 @@
             <a class=" title" href="index.php"><h3 class="text-center">Trash Cycle</h3></a> 
             <h5 class="text-center text-dark">Sign in to Trash Cycle</h5>
             <div class="col-sm-12">
-                <form method="post" action="RecycleList.php" class="loginform mt-4" >    
+                <form method="post" class="loginform mt-4" >    
                     <div class="form-group">
                         <label for="InputEmail" class="h6 col-form-label" >Email address</label>         
                         <input type="email" name="email" class="form-control" size="35" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -50,25 +50,28 @@
 </html> 
 
 <?php 
-$host ="localhost"; 
-$user = "root"; 
-$password = ""; 
-$db = "trash cycle"; 
-
-mysql_connect($host,$user,$password); 
-mysql_select_db($db); 
+include 'connection.php'; 
+session_start();
 
 IF(isset($_POST['email'])) {
     $email =$_POST['email']; 
     $pwd = $_POST['password'];  
 
-    $sql = "'select * from User where Email_Address = '".$email. "'AND Password = '".$pwd."'limit 1'"; 
+    // mysqli_query($conn, "INSERT INTO user (Username, Email_Address, Password, Phone_Number, Address) VALUES ('".$nama."','".$email."','".$pass."','".$nohp."','".$addr."')");
+    $sql = "SELECT * FROM user WHERE Email_Address = '" . $email . "' AND Password = '" . $pwd . "'limit 1"; 
 
-    $result = mysql_query($sql); 
-
-    if(mysql_num_rows($result)==1) {
-        echo " You Have succesfully logged in"; 
-        exit();
+    $result = mysqli_query($conn, $sql); 
+    // echo $result;
+    echo mysqli_error($conn); 
+    if(mysqli_num_rows($result)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            echo " You Have succesfully logged in";
+            $_SESSION["user"] = $row['Username']; 
+            $_SESSION["address"] = $row['Address']; 
+            $_SESSION["nohp"] = $row['Phone_Number']; 
+            header("Location: http://localhost/Project/dist/html/RecycleList.php"); 
+            exit();
+        }
     }
     else {
         echo " You Have entered Invalid data"; 

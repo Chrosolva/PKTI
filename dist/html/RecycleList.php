@@ -15,7 +15,9 @@
             text-align: center;
             border: 1px solid #eee;
         }
-    </style>
+    </style> 
+
+
 </head>
 <body> 
     
@@ -38,15 +40,18 @@
                         <div class="dropdown">
                             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-left" style="width: 35px; margin-right:10px;">
-                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
+                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">
+                                    <?php
+                                        session_start();
+                                        echo $_SESSION['user'];
+                                    ?>
+                                </a>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="Profile.php">Username</a>
+                                <a class="dropdown-item" href="Profile.php"><?php echo $_SESSION['user'] ?></a>
                                 <a href="index.php" class="dropdown-item">Sign Out</a>
                             </div>
                         </div>
-                        
-                        
                     </li>
                 </ul>
             </nav>
@@ -80,11 +85,11 @@
                         <img class="card-img-top text-center" src="../image/plastic.jpg" alt="Bottles" style="width: 200px; height: 200px; margin:0 auto;">
                             <div class="card-body">
                                 <p class="card-text text-center text-dark h6">Bottles</p>
-                                <button type="button" class="btn btn-success container" data-toggle="modal" data-target="#exampleModal">Collect</button> 
+                                <button type="button" class="btn btn-success container" data-toggle="modal" data-target="#exampleModal1">Collect</button> 
                                 <!-- Button trigger modal -->
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -100,11 +105,15 @@
                                                     </div>
                                                     <div class="col-sm-6 text-left">
                                                         <b>Username:</b>
-                                                        <p>Senpai Elwin</p>
+                                                        <p>
+                                                        <?php
+                                                            echo $_SESSION['user'];
+                                                        ?>
+                                                        </p>
                                                         <b>Address:</b>
-                                                        <p>Jl. Cinta Gang Damai</p>
+                                                        <p><?php echo $_SESSION['address']; ?></p>
                                                         <b>Phone:</b>
-                                                        <p>08198765432</p>
+                                                        <p><?php echo $_SESSION['nohp']; ?></p>
                                                         <b>Qty (kg):</b>
                                                         <input type="number" class="form-control">
                                                     </div>
@@ -112,7 +121,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <p class="h5 text-dark float-left container">Collect ?</p>
-                                                <button type="button" class="btn btn-success">Collect</button>
+                                                <a href="Home.php" class="btn btn-success">Collect</a>
                                                 <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                             </div>
                                         </div>
@@ -126,16 +135,96 @@
                             <img class="card-img-top text-center" src="../image/plastic-cap-ring-shank-roofing-nails.jpg" alt="Metals" style="width: 200px; height: 200px; margin:0 auto;">
                             <div class="card-body">
                                 <p class="card-text text-center text-dark h6">Metals</p>
-                                <button class="btn btn-success container">Collect</button>
-                            </div>
+                                <button type ="button" class="btn btn-success container" data-toggle="modal" data-target="#exampleModal2">Collect</button>
+                            </div> 
+
+                            <!--Modal--> 
+
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <image src="../image/plastic-cap-ring-shank-roofing-nails.jpg" style="width: 200px; height: 200px;"></image><br>
+                                                </div>
+                                            <div class="col-sm-6 text-left">
+                                                <b>Username:</b>
+                                                <p>
+                                                <?php
+                                                    echo $_SESSION['user'];
+                                                ?>
+                                                </p>
+                                                <b>Address:</b>
+                                                <p><?php echo $_SESSION['address']; ?></p>
+                                                <b>Phone:</b>
+                                                <p><?php echo $_SESSION['nohp']; ?></p>
+                                                <b>Qty (kg):</b> 
+                                                <input type="number" class="form-control">
+                                            </div>
+                                        </div>                                                    </div>
+                                        <div class="modal-footer">
+                                            <p class="h5 text-dark float-left container">Collect ?</p>
+                                            <a href="Home.php" class="btn btn-success">Collect</a>
+                                            <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="cardbox">
-                            <img class="card-img-top text-center" src="../image/img-unavailable.jpg" alt="Papers" style="width: 200px; height: 200px; margin:0 auto;">
+                            <img class="card-img-top text-center" src="../image/paper.jpg" alt="Papers" style="width: 200px; height: 200px; margin:0 auto;">
                             <div class="card-body">
                                 <p class="card-text text-center text-dark h6">Papers</p>
-                                <button class="btn btn-success container">Collect</button>
+                                <button type="button" class="btn btn-success container" data-toggle="modal" data-target="#exampleModal3">Collect</button>  
+
+                                <!--Modal--> 
+
+                                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <image src="../image/plastic-cap-ring-shank-roofing-nails.jpg" style="width: 200px; height: 200px;"></image><br>
+                                                    </div>
+                                                <div class="col-sm-6 text-left">
+                                                    <b>Username:</b>
+                                                    <p>
+                                                    <?php
+                                                        echo $_SESSION['user'];
+                                                    ?>
+                                                    </p>
+                                                    <b>Address:</b>
+                                                    <p><?php echo $_SESSION['address']; ?></p>
+                                                    <b>Phone:</b>
+                                                    <p><?php echo $_SESSION['nohp']; ?></p>
+                                                    <b>Qty (kg):</b> 
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>                                                    </div>
+                                            <div class="modal-footer">
+                                                <p class="h5 text-dark float-left container">Collect ?</p>
+                                                <a href="Home.php" class="btn btn-success">Collect</a>
+                                                <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,8 +233,48 @@
                             <img class="card-img-top text-center" src="../image/73a9249f-a050-491e-bd75-08937f292719_1.0974051392b4a1788db13a947eb68b5a.jpeg" alt="Glasses" style="width: 200px; height: 200px; margin:0 auto;">
                             <div class="card-body">
                                 <p class="card-text text-center text-dark h6">Glasses</p>
-                                <button class="btn btn-success container">Collect</button>
-                            </div>
+                                <button class="btn btn-success container" type ="button" data-toggle="modal" data-target="#exampleModal4">Collect</button>
+                            </div> 
+
+                            <!--Modal--> 
+
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <image src="../image/73a9249f-a050-491e-bd75-08937f292719_1.0974051392b4a1788db13a947eb68b5a.jpeg" style="width: 200px; height: 200px;"></image><br>
+                                                    </div>
+                                                <div class="col-sm-6 text-left">
+                                                    <b>Username:</b>
+                                                    <p>
+                                                    <?php
+                                                        echo $_SESSION['user'];
+                                                    ?>
+                                                    </p>
+                                                    <b>Address:</b>
+                                                    <p><?php echo $_SESSION['address']; ?></p>
+                                                    <b>Phone:</b>
+                                                    <p><?php echo $_SESSION['nohp']; ?></p>
+                                                    <b>Qty (kg):</b> 
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>                                                    </div>
+                                            <div class="modal-footer">
+                                                <p class="h5 text-dark float-left container">Collect ?</p>
+                                                <a href="Home.php" class="btn btn-success">Collect</a>
+                                                <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -154,45 +283,234 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="cardbox">
-                                <img class="card-img-top text-center" src="../image/img-unavailable.jpg" alt="Bottles" style="width: 200px; height: 200px; margin:0 auto;">
+                                <img class="card-img-top text-center" src="../image/foodwaste.jpg" alt="Bottles" style="width: 200px; height: 200px; margin:0 auto;">
                                 <div class="card-body">
                                     <p class="card-text text-center text-dark h6">Food Waste</p>
-                                    <button class="btn btn-success container">Collect</button>
-                                </div>
+                                    <button class="btn btn-success container" type="button" data-toggle="modal" data-target="#exampleModal5">Collect</button>
+                                </div> 
+
+                                <!--Modal--> 
+
+                                <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <image src="../image/foodwaste.jpg" style="width: 200px; height: 200px;"></image><br>
+                                                        </div>
+                                                    <div class="col-sm-6 text-left">
+                                                        <b>Username:</b>
+                                                        <p>
+                                                        <?php
+                                                            echo $_SESSION['user'];
+                                                        ?>
+                                                        </p>
+                                                        <b>Address:</b>
+                                                        <p><?php echo $_SESSION['address']; ?></p>
+                                                        <b>Phone:</b>
+                                                        <p><?php echo $_SESSION['nohp']; ?></p>
+                                                        <b>Qty (kg):</b> 
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                </div>                                                    </div>
+                                                <div class="modal-footer">
+                                                    <p class="h5 text-dark float-left container">Collect ?</p>
+                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="cardbox">
-                                <img class="card-img-top text-center" src="../image/img-unavailable.jpg" alt="Vegetables" style="width: 200px; height: 200px; margin:0 auto;">
+                                <img class="card-img-top text-center" src="../image/vegetables waste.png" alt="Vegetables" style="width: 200px; height: 200px; margin:0 auto;">
                                 <div class="card-body">
                                     <p class="card-text text-center text-dark h6">Vegetables Wastes</p>
-                                    <button class="btn btn-success container">Collect</button>
-                                </div>
+                                    <button class="btn btn-success container" type="button" data-toggle = "modal" data-target="#exampleModal6">Collect</button>
+                                </div> 
+
+                                <!--Modal--> 
+
+                                <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <image src="../image/vegetables waste.png" style="width: 200px; height: 200px;"></image><br>
+                                                        </div>
+                                                    <div class="col-sm-6 text-left">
+                                                        <b>Username:</b>
+                                                        <p>
+                                                        <?php
+                                                            echo $_SESSION['user'];
+                                                        ?>
+                                                        </p>
+                                                        <b>Address:</b>
+                                                        <p><?php echo $_SESSION['address']; ?></p>
+                                                        <b>Phone:</b>
+                                                        <p><?php echo $_SESSION['nohp']; ?></p>
+                                                        <b>Qty (kg):</b> 
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                </div>                                                    </div>
+                                                <div class="modal-footer">
+                                                    <p class="h5 text-dark float-left container">Collect ?</p>
+                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="cardbox">
-                                <img class="card-img-top text-center" src="../image/img-unavailable.jpg" alt="Animals Wastes" style="width: 200px; height: 200px; margin:0 auto;">
+                                <img class="card-img-top text-center" src="../image/animals.png" alt="Animals Wastes" style="width: 200px; height: 200px; margin:0 auto;">
                                 <div class="card-body">
                                     <p class="card-text text-center text-dark h6">Animals Wastes</p>
-                                    <button class="btn btn-success container">Collect</button>
-                                </div>
+                                    <button class="btn btn-success container" type="button" data-toggle="modal" data-target="#exampleModal7">Collect</button>
+                                </div> 
+
+                                <!--Modal--> 
+
+                                <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <image src="../image/animals.png" style="width: 200px; height: 200px;"></image><br>
+                                                        </div>
+                                                    <div class="col-sm-6 text-left">
+                                                        <b>Username:</b>
+                                                        <p>
+                                                        <?php
+                                                            echo $_SESSION['user'];
+                                                        ?>
+                                                        </p>
+                                                        <b>Address:</b>
+                                                        <p><?php echo $_SESSION['address']; ?></p>
+                                                        <b>Phone:</b>
+                                                        <p><?php echo $_SESSION['nohp']; ?></p>
+                                                        <b>Qty (kg):</b> 
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                </div>                                                    </div>
+                                                <div class="modal-footer">
+                                                    <p class="h5 text-dark float-left container">Collect ?</p>
+                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="cardbox">
-                                <img class="card-img-top text-center" src="../image/img-unavailable.jpg" alt="Roots&Leaves" style="width: 200px; height: 200px; margin:0 auto;">
+                                <img class="card-img-top text-center" src="../image/leaf.jpg" alt="Roots&Leaves" style="width: 200px; height: 200px; margin:0 auto;">
                                 <div class="card-body">
                                     <p class="card-text text-center text-dark h6">Plants Wastes</p>
-                                    <button class="btn btn-success container">Collect</button>
-                                </div>
+                                    <button class="btn btn-success container" type="button" data-toggle="modal" data-target="#exampleModal8">Collect</button>
+                                </div> 
+
+                                <!--Modal--> 
+
+                                <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bottles</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <image src="../image/leaf.jpg" style="width: 200px; height: 200px;"></image><br>
+                                                        </div>
+                                                    <div class="col-sm-6 text-left">
+                                                        <b>Username:</b>
+                                                        <p>
+                                                        <?php
+                                                            echo $_SESSION['user'];
+                                                        ?>
+                                                        </p>
+                                                        <b>Address:</b>
+                                                        <p><?php echo $_SESSION['address']; ?></p>
+                                                        <b>Phone:</b>
+                                                        <p><?php echo $_SESSION['nohp']; ?></p>
+                                                        <b>Qty (kg):</b> 
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                </div>                                                    </div>
+                                                <div class="modal-footer">
+                                                    <p class="h5 text-dark float-left container">Collect ?</p>
+                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>       
+    </div>        
+    <!--Pending Confirmation--> 
+    <div class="container-fluid sect3 pb-3">
+        <h3 class="text-center mb-3">Pending Confirmation </h3>
+        <div class="container detail-scroll">
+            <ul class="list-inline">
+                <li class="list-inline-item detail-box">
+                    <div class="row">
+                        <div class="col-sm-7 sect4">
+                            <image src="../image/73a9249f-a050-491e-bd75-08937f292719_1.0974051392b4a1788db13a947eb68b5a.jpeg" style="width: 200px; height: 200px;"></image><br>
+                            <button type="button" class="mt-2 btn btn-danger btn-cancel" style="width: 100%">CANCEL</button>
+                        </div>
+                        <div class="col-sm-5 sect4">
+                            <b>Username:</b>
+                            <p><?php echo $_SESSION['user']; ?></p>
+                            <b>Address:</b>
+                            <p><?php echo $_SESSION['address'];?> </p>
+                            <b>Phone:</b>
+                            <p><?php echo $_SESSION['nohp'];?> </p>
+                            <b>Qty (kg):</b>
+                            <p>0.5</p>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
 
     <div class="container-fluid pt-5 pb-5 sect4">
         <div class="container">
@@ -211,7 +529,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="container">
                 <canvas id="myChart" width="400" height="100"></canvas>   
             </div>
@@ -264,7 +582,7 @@
                     borderWidth: 1
                 }]
             }
-        });
+        });  
     </script>
 </body>
 </html>

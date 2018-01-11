@@ -114,15 +114,17 @@
                                                         <p><?php echo $_SESSION['address']; ?></p>
                                                         <b>Phone:</b>
                                                         <p><?php echo $_SESSION['nohp']; ?></p>
-                                                        <b>Qty (kg):</b>
-                                                        <input type="number" class="form-control" id="qty" >
+                                                        <b>Qty (kg):</b> 
+                                                        <input type="number" class="form-control" id="qty" > 
+                                                        <script>var qty = document.getElementById("qty"); document.cookie = qty;</script>
                                                     </div>
                                                 </div>        
                                             </div>
                                             <div class="modal-footer">
                                                 <p class="h5 text-dark float-left container">Collect ?</p>
-                                                <button type="button" class="btn btn-success" id="btn_collect">Collect</button>
-                                                <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                                                <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
+                                                <button type="button" class="btn btn-link" data-dismiss="modal">No</button> 
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -201,7 +203,7 @@
                                         </div>                                                    </div>
                                         <div class="modal-footer">
                                             <p class="h5 text-dark float-left container">Collect ?</p>
-                                            <a href="Home.php" class="btn btn-success">Collect</a>
+                                            <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                             <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                         </div>
                                     </div>
@@ -249,7 +251,7 @@
                                             </div>                                                    </div>
                                             <div class="modal-footer">
                                                 <p class="h5 text-dark float-left container">Collect ?</p>
-                                                <a href="Home.php" class="btn btn-success">Collect</a>
+                                                <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                 <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                             </div>
                                         </div>
@@ -299,7 +301,7 @@
                                             </div>                                                    </div>
                                             <div class="modal-footer">
                                                 <p class="h5 text-dark float-left container">Collect ?</p>
-                                                <a href="Home.php" class="btn btn-success">Collect</a>
+                                                <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                 <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                             </div>
                                         </div>
@@ -352,7 +354,7 @@
                                                 </div>                                                    </div>
                                                 <div class="modal-footer">
                                                     <p class="h5 text-dark float-left container">Collect ?</p>
-                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                     <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                                 </div>
                                             </div>
@@ -401,7 +403,7 @@
                                                 </div>                                                    </div>
                                                 <div class="modal-footer">
                                                     <p class="h5 text-dark float-left container">Collect ?</p>
-                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                     <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                                 </div>
                                             </div>
@@ -450,7 +452,7 @@
                                                 </div>                                                    </div>
                                                 <div class="modal-footer">
                                                     <p class="h5 text-dark float-left container">Collect ?</p>
-                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                     <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                                 </div>
                                             </div>
@@ -500,7 +502,7 @@
                                                 </div>                                                    </div>
                                                 <div class="modal-footer">
                                                     <p class="h5 text-dark float-left container">Collect ?</p>
-                                                    <a href="Home.php" class="btn btn-success">Collect</a>
+                                                    <button type="button" class="btn btn-success" id="btn_collect" data-dismiss="modal">Collect</button>
                                                     <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                                 </div>
                                             </div>

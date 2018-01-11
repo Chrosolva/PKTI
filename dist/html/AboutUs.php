@@ -85,10 +85,10 @@
                         <button class="dropdown-toggle btn btn-success" type="button" id="detail2" style="width:250px;">See More</button> 
                         <div class="container-fluid">
                             <div class="container pt-5 pb-5" id="hasil2" style="width:250px;">
-                            <p class="card-text text-left text-dark h6">Lives on Pukat4/5 street no 12.</p>
+                            <p class="card-text text-left text-dark h6">Lives on Pukat4/5 street GG Durian no 71BB.</p>
                             <p class="card-text text-left text-dark h6">Study at STMIK Mikroskil, Medan, Indonesia</p> 
                             <p class="card-text text-left text-dark h6">Email : elwinchen@rocketmail.com</p> 
-                            <p class="card-text text-left text-dark h6">Contact number : 0812332112</p>
+                            <p class="card-text text-left text-dark h6">Contact number : 085763055599</p>
                             </div>
                         </div>
                         <script>

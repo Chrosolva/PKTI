@@ -17,44 +17,52 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="container">
-                        <form class="loginform mt-4" action="Login.php" style="width: 450px;">    
+                        <form class="loginform mt-4" method="post" action="joinusprocess.php" style="width: 450px;">    
                             <div class="form-group row">
                                 <label for="InputName" class="h6 col-sm-4 col-form-label">Name</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="InputName"  placeholder="Enter Your Name Here">
+                                    <input type="text" class="form-control" id="InputName"  placeholder="Enter Your Name Here" name="name" required>
                                 </div>
+
                             </div>
                             <div class="form-group row">
                                 <label for="InputEmail" class="h6 col-sm-4 col-form-label">Email address</label> 
                                 <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
                                 </div>
+
                             </div>
                             <div class="form-group row">
                                 <label for="InputPassword" class="h6 col-sm-4">Password</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="password" required>
                                 </div>
+
                             </div>
                             <div class="form-group row">
                                 <label for="InputNo" class="h6 col-sm-4">Phone Number</label> 
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="InputNo"  placeholder="Phone Number">    
+                                    <input type="text" class="form-control" id="InputN0"  placeholder="Phone Number" name="nohp" required>    
                                 </div>
+
                             </div>
                             <div class="form-group row">
                                 <label for="Address" class="h6 col-sm-4">Address</label>
                                 <div class="col-sm-8">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your Address"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your Address" name="address" required></textarea>
                                 </div>
+
                             </div> 
+
                             <div class="form-group row">
-                                <label for="InputNoBK" class="h6 col-sm-4">No Kendaraan</label> 
+                                <label for="NoBK" class="h6 col-sm-4">No Kendaraan</label> 
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="InputNoBK"  placeholder="No Kendaraan">    
+                                    <input type="text" class="form-control" id="NoBK"  placeholder="No Kendaraan" name="nobk" required>    
                                 </div>
+
                             </div>
-                            <button type="submit" class="btn btn-primary form-control">Sign Up</button>
+
+                            <button type="submit" class="btn btn-success">Sign Up</button>
                         </form>                
                     </div>      
                 </div> 
@@ -65,7 +73,7 @@
                     <p class="text-dark h6">The more trashpicker registered the easier the job will be.
                     and the more you collect , the better the earth will be. clean environment for better life.
                     </p> 
-                    <p class="text-dark h6">Registered ? Then Start to Collect. <a href="LoginTP.php" class=" btn btn-success text-right">Sign In</a></p>
+                    <p class="text-dark h6">Registered ? Then Start your job. <a href="Login.php" class=" btn btn-success text-right">Sign In</a></p>
                 </div>
             </div>
              

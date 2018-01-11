@@ -58,11 +58,38 @@ IF(isset($_POST['email'])) {
     $pwd = $_POST['password'];  
 
     // mysqli_query($conn, "INSERT INTO user (Username, Email_Address, Password, Phone_Number, Address) VALUES ('".$nama."','".$email."','".$pass."','".$nohp."','".$addr."')");
-    $sql = "SELECT * FROM user WHERE Email_Address = '" . $email . "' AND Password = '" . $pwd . "'limit 1"; 
+    $sql = "SELECT * FROM user INNER JOIN trashpicker USING (User_Id) WHERE Email_Address = '" . $email . "' AND Password = '" . $pwd . "'limit 1"; 
 
-    $result = mysqli_query($conn, $sql); 
-    // echo $result;
-    echo mysqli_error($conn); 
+    $result = mysqli_query($conn,  $sql);   
+    if(mysqli_num_rows($result)) { 
+        $row = mysqli_fetch_assoc($result);
+        if($email == $row['Email_Address']) {
+            $_SESSION["user"] = $row['Username']; 
+            $_SESSION["address"] = $row['Address']; 
+            $_SESSION["nohp"] = $row['Phone_Number']; 
+            $_SESSION["userId"] = $row['User_Id'];  
+            header("Location: http://localhost/Project/dist/html/Home.php");
+        }
+     } 
+    else 
+    {
+        $sql2 = "SELECT * FROM user WHERE Email_Address = '" . $email . "' AND Password = '" . $pwd . "'limit 1"; 
+            $result2 = mysqli_query($conn,  $sql2); 
+            if(mysqli_num_rows($result2)) {
+                while($row = mysqli_fetch_assoc($result2)) {
+                    echo " You Have succesfully logged in";
+                    $_SESSION["user"] = $row['Username']; 
+                    $_SESSION["address"] = $row['Address']; 
+                    $_SESSION["nohp"] = $row['Phone_Number']; 
+                    $_SESSION["userId"] = $row['User_Id'];  
+                    header("Location: http://localhost/Project/dist/html/RecycleList.php"); 
+                    exit();
+                }
+            }
+    }
+} 
+    
+    /*
     if(mysqli_num_rows($result)) {
         while($row = mysqli_fetch_assoc($result)) {
             echo " You Have succesfully logged in";
@@ -79,5 +106,5 @@ IF(isset($_POST['email'])) {
         exit();
     }
 }
-
+*/
 ?>

@@ -57,10 +57,10 @@
                         <div class="dropdown">
                             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="../image/user.jpg" alt="User" class="img-fluid nav-item float-left" style="width: 35px; margin-right:10px;">
-                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; ">UserName</a>
+                                <a href="#" class="nav-link text-light" style="margin-left:20px; padding-right:20px; "><?php session_start(); echo $_SESSION['user'] ?></a>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="Profile.php">Username</a>
+                                <a class="dropdown-item" href="Profile.php"><?php echo $_SESSION['user'] ?></a>
                                 <a href="index.php" class="dropdown-item">Sign Out</a>
                             </div>
                         </div>
@@ -207,6 +207,7 @@
             a.parentNode.removeChild(a);
         })   
         }
-    </script>
+    </script> 
+    
 </body>
 </html>

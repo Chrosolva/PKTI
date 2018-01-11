@@ -69,6 +69,7 @@ IF(isset($_POST['email'])) {
             $_SESSION["user"] = $row['Username']; 
             $_SESSION["address"] = $row['Address']; 
             $_SESSION["nohp"] = $row['Phone_Number']; 
+            $_SESSION["userId"] = $row['User_Id'];  
             header("Location: http://localhost/Project/dist/html/RecycleList.php"); 
             exit();
         }

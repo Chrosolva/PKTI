@@ -82,9 +82,9 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="cardbox">
-                        <img class="card-img-top text-center" src="../image/plastic.jpg" alt="Bottles" style="width: 200px; height: 200px; margin:0 auto;">
+                        <img  class="card-img-top text-center" src="../image/plastic.jpg" alt="Bottles" style="width: 200px; height: 200px; margin:0 auto;">
                             <div class="card-body">
-                                <p class="card-text text-center text-dark h6">Bottles</p>
+                                <p id="waste1" class="card-text text-center text-dark h6">Bottles</p>
                                 <button type="button" class="btn btn-success container" data-toggle="modal" data-target="#exampleModal1">Collect</button> 
                                 <!-- Button trigger modal -->
 
@@ -115,13 +115,13 @@
                                                         <b>Phone:</b>
                                                         <p><?php echo $_SESSION['nohp']; ?></p>
                                                         <b>Qty (kg):</b>
-                                                        <input type="number" class="form-control">
+                                                        <input type="number" class="form-control" id="qty" >
                                                     </div>
                                                 </div>        
                                             </div>
                                             <div class="modal-footer">
                                                 <p class="h5 text-dark float-left container">Collect ?</p>
-                                                <a href="Home.php" class="btn btn-success">Collect</a>
+                                                <button type="button" class="btn btn-success" id="btn_collect">Collect</button>
                                                 <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
                                             </div>
                                         </div>
@@ -129,7 +129,37 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                    <script>
+                        var btncollect = document.getElementById("btn_collect"); 
+                        var waste1 = document.getElementById("waste1"); 
+                        var w1 = document.cookie = "Waste1 = " + waste1.innerHTML;    
+                        var quantity = document.getElementById("qty"); 
+                        var qty = document.cookie = "Quantity = " + quantity.innerHTML; 
+                        <?php 
+                        include "connection.php" ; 
+                        $userid = $_SESSION['userId']; 
+                        $wastename = $_COOKIE['Waste1']; 
+                        $quantity = $_COOKIE['Quantity']; 
+                        $query1 = "SELECT * FROM waste WHERE Waste_Name = '" . $wastename . "' limit 1"; 
+                        $query1result = mysqli_query($conn,$query1);  
+                        
+                        if(mysqli_num_rows($result)) {
+                            while($row = mysqli_fetch_assoc($result)) {
+                                $_SESSION['WasteId'] = $row['WasteID']; 
+                                exit();
+                            }
+                        } 
+
+                        $wasteid = $_SESSION['WasteId']; 
+
+                        if($quantity >0) {
+                            $query2 = mysqli_query($conn, "INSERT INTO collect (UserID, WasteID, Quantity) VALUES ('".$userid."','".$wasteid."','".$quantity."')") ;  
+                            
+                        }
+                        ?> 
+
+                    </script>
                     <div class="col-sm-3">
                         <div class="cardbox">
                             <img class="card-img-top text-center" src="../image/plastic-cap-ring-shank-roofing-nails.jpg" alt="Metals" style="width: 200px; height: 200px; margin:0 auto;">
@@ -485,7 +515,7 @@
         </div>
     </div>        
     <!--Pending Confirmation--> 
-    <div class="container-fluid sect3 pb-3">
+    <div class="container-fluid sect3 pb-3 " id="Pending_Confirmation"> 
         <h3 class="text-center mb-3">Pending Confirmation </h3>
         <div class="container detail-scroll">
             <ul class="list-inline">
@@ -582,7 +612,7 @@
                     borderWidth: 1
                 }]
             }
-        });  
+        });   
     </script>
 </body>
 </html>
